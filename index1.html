@@ -5,19 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+    <style>
+      body {
+        background-color: pink;
+      }
+    </style>
   </head>
   <body>
-      <script>
-        // 1.实例化ajax对象 (小黄人对象)
-            var xhr = new XMLHttpRequest()
-        // 2.设置请求的方法和地址
-            xhr.open(方法, 地址)
-        // 3.设置请求头(post才需要)
-            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
-        // 4.注册回调函数
-            xhr.onload = function() {}
-        // 5.发送请求 post的数据在send中发送
-            xhr.send(数据)
-      </script>
+    <script>
+      // 1.实例化ajax对象 (小黄人对象)
+      var xhr = new XMLHttpRequest();
+      // 2.设置请求的方法和地址
+      xhr.open(方法, 地址);
+      // 3.设置请求头(post才需要)
+      xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      // 4.注册回调函数
+      xhr.onload = function() {};
+      // 5.发送请求 post的数据在send中发送
+      xhr.send(数据);
+      //
+      // 1.实例化ajax对象 (小黄人对象)
+      var xhr = new XMLHttpRequest();
+      // 2.设置请求的方法和地址
+      xhr.open(方法, 地址);
+      // 3.设置请求头(post才需要)
+      xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      // 4.注册回调函数
+      xhr.onload = function() {};
+      // 5.发送请求 post的数据在send中发送
+
+      xhr.send(数据);
+      $.ajax({
+        url: "", //地址
+        data: {}, //数据可以写对象
+        type: "", //请求的方法
+        dataType: "json",
+        success: function(backData) {
+          //回调函数
+        }
+      });
+    </script>
   </body>
 </html>
